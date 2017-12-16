@@ -1,6 +1,6 @@
 language: java
 sudo: true # false for faster builds
-script: "mvn -f MatematikUygulamasi/pom.xml clean install cobertura:cobertura checkstyle:checkstyle javadoc:javadoc javadoc:aggregate site pmd:pmd-Dmaven.javadoc.skip=false"
+script: "mvn -f MatematikUygulamasi/pom.xml clean install cobertura:cobertura checkstyle:checkstyle pmd:pmd javadoc:javadoc javadoc:aggregate site -Dmaven.javadoc.skip=false"
 jdk:
   - oraclejdk8
   - oraclejdk9
