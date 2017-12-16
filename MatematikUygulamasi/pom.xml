@@ -8,11 +8,11 @@
 	<description>Matematiksel Islemler</description>
 
 	<scm>
-    <connection>scm:git:https://github.com/ozkansari/YAZILIM_ARACLARI_REPO.git</connection>
-    <tag>HEAD</tag>
-    <url>https://github.com/ozkansari/YAZILIM_ARACLARI_REPO</url>
-  </scm>	
-  
+		<connection>scm:git:https://github.com/ozkansari/YAZILIM_ARACLARI_REPO.git</connection>
+		<tag>HEAD</tag>
+		<url>https://github.com/ozkansari/YAZILIM_ARACLARI_REPO</url>
+	</scm>
+
 	<properties>
 		<!-- define all plugin versions -->
 		<maven.version>3.0.1</maven.version>
@@ -50,7 +50,7 @@
 		<buildnumber-maven-plugin.version>1.0-beta-4</buildnumber-maven-plugin.version>
 		<build-helper-maven-plugin.version>1.5</build-helper-maven-plugin.version>
 		<cargo-maven2-plugin.version>1.0.5</cargo-maven2-plugin.version>
-		<cobertura-maven-plugin.version>2.4</cobertura-maven-plugin.version>
+		<cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
 		<exec-maven-plugin.version>1.2</exec-maven-plugin.version>
 		<findbugs-maven-plugin.version>3.0.1</findbugs-maven-plugin.version>
 		<gwt-maven-plugin.version>2.1.0-1</gwt-maven-plugin.version>
@@ -197,8 +197,19 @@
 			</extension>
 		</extensions>
 
-		
-		
+		<plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>cobertura-maven-plugin</artifactId>
+			<version>${cobertura-maven-plugin.version}</version>
+			<configuration>
+				<formats>
+					<format>html</format>
+					<format>xml</format>
+				</formats>
+				<check />
+			</configuration>
+		</plugin>
+
 	</build>
 
 </project>
