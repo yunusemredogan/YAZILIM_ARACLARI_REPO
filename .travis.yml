@@ -3,8 +3,5 @@ sudo: true # false for faster builds
 script: "mvn -f -Dmaven.javadoc.skip=false MatematikUygulamasi/pom.xml clean install cobertura:cobertura checkstyle:checkstyle pmd:pmd javadoc:javadoc javadoc:aggregate site"
 jdk:
   - oraclejdk8
-  - oraclejdk9
-  - openjdk8
-  - openjdk9
 after_success:
   - bash <(curl -s https://codecov.io/bash)
