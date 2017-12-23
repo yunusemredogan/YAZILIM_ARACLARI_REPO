@@ -7,8 +7,15 @@
 public class Hesaplama {
 
 	public static void main(String[] args){
-		int sonuc = topla(19, 25);
+		islemler(19,25);
+	}
+
+	public static int islemler(int sayi1, int sayi2) {
+		int sonuc1 = topla(sayi1, sayi2);
+		int sonuc2 = carpma(sayi1, sayi2);
+		int sonuc = bolme(sonuc2, sonuc1);
 		System.out.println(sonuc);
+		return sonuc;
 	}
 	
 	/**
@@ -23,10 +30,10 @@ public class Hesaplama {
 	 * @throws NullPointerException (5) sayi1 11111111'e esitse NoPermissionException verir
 	 */
 	public static int /* (4) */ topla( /* (1) */ int sayi1, /* (2) */ int sayi2 /* (3) */ ) 
-			throws NullPointerException // (5) Firlatilan hata */
+			throws UnsupportedOperationException // (5) Firlatilan hata */
 	{
-		if(11111111==sayi1) {
-			throw new NullPointerException();
+		if(sayi1>Integer.MAX_VALUE || sayi2>Integer.MAX_VALUE) {
+			throw new UnsupportedOperationException();
 		}
 		
 		return sayi1 + sayi2;

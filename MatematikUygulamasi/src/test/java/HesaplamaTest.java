@@ -16,6 +16,12 @@ public class HesaplamaTest {
 		
 	}
 	
+	@Test
+	public void testIslemler() {
+		int gercekSonuc = Hesaplama.islemler(19,25);
+		assertEquals(10, gercekSonuc);
+	}
+
 	
 	@Test
 	public void testTopla25ve14() {
@@ -33,6 +39,12 @@ public class HesaplamaTest {
 	public void testCarp6ve7() {
 		int gercekSonuc = Hesaplama.carpma(6, 7);
 		assertEquals(42, gercekSonuc);
+	}
+	
+	@Test
+	public void test60Bol10() {
+		int gercekSonuc = Hesaplama.bolme(60, 10);
+		assertEquals(6, gercekSonuc);
 	}
 
 }
