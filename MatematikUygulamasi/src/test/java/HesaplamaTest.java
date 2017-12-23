@@ -18,17 +18,17 @@ public class HesaplamaTest {
 	
 	@Test(expected = UnsupportedOperationException.class)
 	public void testToplaUnupported1() {
-		Hesaplama.topla(Integer.MAX_VALUE+1, 3);
+		Hesaplama.topla(10000000, 3);
 	}
 	
 	@Test(expected = UnsupportedOperationException.class)
 	public void testToplaUnupported2() {
-		Hesaplama.topla(3, Integer.MAX_VALUE+1);
+		Hesaplama.topla(3, 10000000);
 	}
 	
 	@Test(expected = UnsupportedOperationException.class)
 	public void testToplaUnupported3() {
-		Hesaplama.topla(Integer.MAX_VALUE+1, Integer.MAX_VALUE+1);
+		Hesaplama.topla(10000000, 10000000);
 	}
 	
 	@Test

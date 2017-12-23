@@ -32,7 +32,7 @@ public class Hesaplama {
 	public static int /* (4) */ topla( /* (1) */ int sayi1, /* (2) */ int sayi2 /* (3) */ ) 
 			throws UnsupportedOperationException // (5) Firlatilan hata */
 	{
-		if(sayi1>Integer.MAX_VALUE || sayi2>Integer.MAX_VALUE) {
+		if(sayi1>=10000000 || sayi2>=10000000) {
 			throw new UnsupportedOperationException();
 		}
 		
